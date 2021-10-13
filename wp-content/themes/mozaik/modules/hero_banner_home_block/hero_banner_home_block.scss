@@ -1,0 +1,134 @@
+@import '../../src/scss/components/vars';
+
+.hero_banner_home_block {
+  &[class*='bg-'], &[data-parallax="scroll"], &.video {
+    background: none;
+    background-color: rgba(0,0,0,0);
+  }
+
+  /*settings*/
+  &.heading_black {
+    .section-holder h1 {
+      color: $grey2;
+    }
+  }
+  &.heading_white {
+    .section-holder h1 {
+      color: $white;
+    }
+  }
+  &.heading_blue {
+    .section-holder h1 {
+      color: $normal_blue;
+    }
+  }
+
+  &.text_black {
+    .section-holder .content {
+      color: $grey2;
+    }
+  }
+  &.text_white {
+    .section-holder .content {
+      color: $white;
+    }
+  }
+  &.text_blue {
+    .section-holder .content {
+      color: $normal_blue;
+    }
+  }
+  /*settings*/
+
+  .section-holder {
+    max-width: 643px;
+    padding: 106px 0 40px 33px;
+
+    @media (max-width: $sm) {
+      padding: 60px 0 40px 0;
+    }
+
+    @media (max-width: $xs) {
+      padding: 40px 0;
+    }
+
+    h1 {
+      font-family: $montserrat;
+      font-weight: 300;
+      color: $grey2;
+      margin: 0;
+    }
+
+    .tagline {
+      font-size: 22px;
+      line-height: 31px;
+      color: $normal_blue;
+      font-weight: 700;
+      margin-top: 33px;
+
+      @media (max-width: $sm) {
+        font-size: 20px;
+        line-height: 29px;
+      }
+
+      @media (max-width: $xs) {
+        font-size: 18px;
+        line-height: 27px;
+        margin-top: 25px;
+      }
+    }
+
+    .content {
+      font-family: $lato;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      color: $grey2;
+      margin-top: 4px;
+
+      @media (max-width: $sm) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      @media (max-width: $xs) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      *:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .primary-btn {
+      display: inline-block;
+      margin-top: 14px;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .s-image {
+    position: absolute;
+    top: -137px;
+    right: -253px;
+    width: 100%;
+    max-width: 740px;
+
+    @media (max-width: $md) {
+      max-width: 500px;
+      right: -100px;
+      top: -90px;
+    }
+
+    @media (max-width: $xs) {
+      //max-width: 300px;
+      //right: -70px;
+      //top: -65px;
+      display: none;
+    }
+  }
+}

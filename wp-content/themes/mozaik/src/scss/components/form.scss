@@ -1,0 +1,46 @@
+.gform_wrapper {
+  input[type="text"], input[type="email"] {
+    height: 47px;
+    font-size: 16px;
+    border: 1px solid $this_grey;
+    font-family: $montserrat;
+    font-weight: 400;
+    padding: 0 16px !important;
+    outline: none !important;
+
+    @media (max-width: $xs) {
+      padding: 0 12px !important;
+    }
+  }
+
+  textarea {
+    outline: none !important;
+    padding: 16px 36px !important;
+    font-size: 16px;
+    font-family: $montserrat;
+    font-weight: 400;
+    height: 152px !important;
+    outline: none !important;
+
+    @media (max-width: $xs) {
+      padding: 0 12px !important;
+    }
+  }
+
+  select {
+    padding: 0 23px !important;
+    font-family: $montserrat;
+    font-weight: 400;
+    outline: none !important;
+    background-image: url("../img/select-drop-icon.png");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 94% 53%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    @media (max-width: $sm) {
+      padding: 0 10px !important;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+    "key": "group_615e0b1cf359d",
+    "title": "Single Customer Story page",
+    "fields": [
+        {
+            "key": "field_615e0b402eaaf",
+            "label": "Block with form",
+            "name": "block_with_form",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_6155cf53eedb2",
+                "field_61581b7025fd7",
+                "field_61581b7025fd8",
+                "field_61581b7025fd9",
+                "field_61581b7025fda",
+                "field_6155cf53eedb5",
+                "field_6155cf53eedb6",
+                "field_6155cf53eedb7",
+                "field_6155cf53eedb8",
+                "field_6155cf53eedb9",
+                "field_6155cf53eedba",
+                "field_6155cf53eedbb",
+                "field_6155cf53eedbc",
+                "field_6155cf53eedbd",
+                "field_6155cf53eedbe",
+                "field_6155cf53eedbf",
+                "field_6155cf53eedc0",
+                "field_6155cf53eedc1",
+                "field_6155cf53eedc2"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_615f090f5d665",
+            "label": "Latest posts section title",
+            "name": "latest_posts_section_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-single-customer-story-page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1633618232
+}

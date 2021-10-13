@@ -1,0 +1,155 @@
+@import '../../src/scss/components/vars';
+
+body:not(.home) {
+  .featured_customer_story_block {
+    background-image: url("../../../img/block-bg.png");
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+}
+
+.featured_customer_story_block {
+  color: $white;
+
+  /*settings*/
+  &.heading_black {
+    .story h2, story span {
+      color: $grey2;
+    }
+  }
+  &.heading_white {
+    .story h2, story span {
+      color: $white;
+    }
+  }
+  &.heading_blue {
+    .story h2, story span {
+      color: $normal_blue;
+    }
+  }
+
+  &.text_black {
+    color: $grey2;
+  }
+  &.text_white {
+    color: $white;
+  }
+  &.text_blue {
+    color: $normal_blue;
+  }
+  /*settings*/
+
+  .section-holder {
+    padding: 98px 0;
+
+    @media (max-width: $sm) {
+      padding: 60px 0;
+    }
+
+    @media (max-width: $xs) {
+      padding: 40px 0;
+    }
+  }
+
+  .story {
+    display: flex;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+
+    & > div:first-of-type {
+      max-width: 700px;
+      padding-left: 97px;
+      padding-top: 24px;
+
+      @media (max-width: $md) {
+        padding-top: 0;
+        padding-left: 0;
+        max-width: 100%;
+      }
+    }
+
+    span {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 700;
+      margin-bottom: 2px;
+      display: inline-block;
+
+      @media (max-width: $sm) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      @media (max-width: $xs) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    h2 {
+      margin: 0 0 13px 0;
+    }
+
+    .excerpt {
+      font-size: 20px;
+      line-height: 30px;
+      font-family: $lato;
+      font-weight: 400;
+
+      @media (max-width: $sm) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      @media (max-width: $xs) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    .secondary-btn {
+      display: inline-block;
+      margin-top: 34px;
+      padding: 5px 32px;
+
+      @media (max-width: $sm) {
+        padding: 5px 20px;
+      }
+      @media (max-width: $xs) {
+        padding: 5px 15px;
+      }
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      min-width: 334px;
+      max-width: 334px;
+      margin-left: 85px;
+
+      @media (max-width: $md) {
+        margin-left: 0;
+        margin-top: 40px;
+        min-width: 0;
+      }
+
+      @media (max-width: $xs) {
+        max-width: 250px;
+      }
+
+      img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        min-height: 380px;
+        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+        @media (max-width: $xs) {
+          min-height: 280px;
+        }
+      }
+    }
+  }
+}

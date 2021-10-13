@@ -1,0 +1,261 @@
+@import '../../src/scss/components/vars';
+
+.columns_with_icons_block {
+  background: linear-gradient(to bottom, $this_blue, $blue2);
+
+  /*settings*/
+  &.heading_black {
+    .section-holder h2 {
+      color: $grey2;
+    }
+  }
+  &.heading_white {
+    .section-holder h2 {
+      color: $white;
+    }
+  }
+  &.heading_blue {
+    .section-holder h2 {
+      color: $normal_blue;
+    }
+  }
+
+  &.text_black {
+    .columns .block {
+      color: $grey2;
+    }
+  }
+  &.text_white {
+    .columns .block {
+      color: $white;
+    }
+  }
+  &.text_blue {
+    .columns .block {
+      color: $normal_blue;
+    }
+  }
+
+  &[class*='bg-'], &[data-parallax="scroll"], &.video {
+    background: none;
+    background-color: rgba(0,0,0,0);
+  }
+
+  &.bg-primary-blue {
+    background-color: $normal_blue;
+  }
+  &.bg-secondary-orange {
+    background-color: $orange;
+  }
+  &.bg-green {
+    background-color: $green;
+  }
+  &.bg-purple {
+    background-color: $purple;
+  }
+  &.bg-yellow {
+    background-color: $yellow;
+  }
+  &.bg-gray {
+    background-color: $grey2;
+  }
+  &.bg-black {
+    background-color: $black;
+  }
+  &.bg-white {
+    background-color: $white;
+  }
+  /*settings*/
+
+  .section-holder {
+    padding: 103px 0 40px;
+
+    @media (max-width: $lg) {
+      padding: 100px 0 40px;
+    }
+
+    @media (max-width: $md) {
+      padding: 80px 0 40px;
+    }
+
+    @media (max-width: $sm) {
+      padding: 60px 0 40px;
+    }
+
+    @media (max-width: $xs) {
+      padding: 40px 0;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: $white;
+    font-family: $montserrat;
+    font-weight: 400;
+    margin-bottom: 130px;
+
+    @media (max-width: $lg) {
+      margin-bottom: 100px;
+    }
+    @media (max-width: $md) {
+      margin-bottom: 80px;
+    }
+    @media (max-width: $sm) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: $xs) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @media (max-width: $md) {
+      justify-content: space-between;
+    }
+
+    &.top .block {
+      flex-direction: column;
+
+      .icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    &.columns-2 {
+      .block {
+        width: 50%;
+      }
+    }
+    &.columns-3 {
+      .block {
+        width: 33.33%;
+      }
+    }
+    &.columns-4 {
+      .block {
+        width: 25%;
+        @media (max-width: $lg) {
+          width: 33.33%;
+        }
+      }
+    }
+
+    .block {
+      display: flex;
+      color: $white;
+      margin-bottom: 75px;
+      max-width: 560px;
+
+      @media (max-width: $md) {
+        margin-bottom: 50px;
+        width: 50% !important;
+      }
+      @media (max-width: $sm) {
+        margin-bottom: 40px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      @media (max-width: $xs) {
+        width: 100% !important;
+      }
+
+      .icon {
+        width: 100%;
+        max-width: 71px;
+        max-height: 82px;
+        padding-top: 18px;
+        margin-right: 53px;
+
+        @media (max-width: $md) {
+          margin-right: 20px;
+          max-width: 60px;
+          padding-top: 8px;
+        }
+        @media (max-width: $sm) {
+          max-width: 40px;
+        }
+        @media (max-width: $xs) {
+          padding-top: 0;
+          margin-right: 15px;
+        }
+
+        img {
+          display: block;
+          width: auto;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .heading {
+        font-size: 24px;
+        line-height: 46px;
+        font-family: $montserrat;
+        font-weight: 700;
+
+        @media (max-width: $md) {
+          font-size: 22px;
+          line-height: 34px;
+        }
+        @media (max-width: $sm) {
+          font-size: 20px;
+          line-height: 32px;
+        }
+        @media (max-width: $xs) {
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+
+      .content {
+        font-size: 20px;
+        line-height: 30px;
+        font-family: $lato;
+        font-weight: 400;
+        margin-top: 12px;
+        padding-right: 20px;
+
+        @media (max-width: $md) {
+          font-size: 18px;
+          line-height: 28px;
+        }
+        @media (max-width: $xs) {
+          font-size: 16px;
+          line-height: 26px;
+          padding-right: 0;
+          margin-top: 0;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .button-holder {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+
+    @media (max-width: $md) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $sm) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+    }
+  }
+}

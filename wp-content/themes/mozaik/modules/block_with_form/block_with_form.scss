@@ -1,0 +1,177 @@
+@import '../../src/scss/components/vars';
+
+.block_with_form {
+  overflow: hidden;
+
+  /*settings*/
+  &.heading_black {
+    h2 {
+      color: $this_grey;
+    }
+  }
+
+  &.heading_white {
+    h2 {
+      color: $white;
+    }
+  }
+
+  &.heading_blue {
+    h2 {
+      color: $this_blue;
+    }
+  }
+
+  &.text_black {
+    .content {
+      color: $this_grey;
+    }
+  }
+
+  &.text_white {
+    .content {
+      color: $white;
+    }
+  }
+
+  &.text_blue {
+    .content {
+      color: $this_blue;
+    }
+  }
+
+  /*settings*/
+
+  .section-holder {
+    position: relative;
+    padding: 88px 0 40px;
+
+    @media (max-width: $sm) {
+      padding: 60px 0;
+    }
+
+    @media (max-width: $xs) {
+      padding: 40px 0;
+    }
+  }
+
+  .s-image {
+    position: absolute;
+    top: -133px;
+    right: -142px;
+    max-width: 642px;
+
+    @media (max-width: $md) {
+      max-width: 500px;
+      right: -100px;
+      top: -90px;
+    }
+
+    @media (max-width: $xs) {
+      max-width: 300px;
+      right: -70px;
+      top: -65px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  h2 {
+    color: $this_blue;
+    font-size: 42px;
+    line-height: 57px;
+    font-family: $montserrat;
+    font-weight: 700;
+    margin: 0;
+    max-width: 662px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: $md) {
+      font-size: 37px;
+      line-height: 47px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 33px;
+      line-height: 43px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  .content {
+    max-width: 662px;
+    font-size: 24px;
+    line-height: 36px;
+    color: $this_grey;
+    font-family: $lato;
+    font-weight: 400;
+    margin-top: 12px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: $sm) {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .form-holder {
+    margin-top: 32px;
+    max-width: 520px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: $xs) {
+      margin-top: 25px;
+    }
+
+    .gform_wrapper.gravity-theme .gform_fields {
+      grid-gap: 15px;
+    }
+
+    input[type="submit"] {
+      background-color: $orange;
+      border: 1px solid $orange;
+      color: $white;
+      font-size: 20px;
+      line-height: 36px;
+      font-family: $lato;
+      font-weight: 400;
+      padding: 5px 22px;
+      transition: background-color $delay;
+
+      @media (max-width: $sm) {
+        font-size: 18px;
+        line-height: 34px;
+        padding: 5px 20px;
+      }
+      @media (max-width: $xs) {
+        font-size: 16px;
+        line-height: 32px;
+        padding: 5px 15px;
+      }
+
+      &:hover {
+        color: $orange;
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}

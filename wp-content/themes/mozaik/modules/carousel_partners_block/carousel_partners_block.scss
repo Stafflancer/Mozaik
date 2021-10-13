@@ -1,0 +1,226 @@
+@import '../../src/scss/components/vars';
+
+.carousel_partners_block {
+  position: relative;
+  z-index: 2;
+
+  /*settings*/
+  &.heading_black, &.text_black {
+    h2 {
+      color: $grey2;
+    }
+  }
+
+  &.heading_white, &.text_white {
+    h2 {
+      color: $white;
+    }
+  }
+
+  &.heading_blue, &.text_blue {
+    h2 {
+      color: $normal_blue;
+    }
+  }
+
+  &[class*='bg-'], &[data-parallax="scroll"], &.video {
+    background: none;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  &.bg-primary-blue {
+    background-color: $normal_blue !important;
+  }
+
+  &.bg-secondary-orange {
+    background-color: $orange !important;
+  }
+
+  &.bg-green {
+    background-color: $green !important;
+  }
+
+  &.bg-purple {
+    background-color: $purple !important;
+  }
+
+  &.bg-yellow {
+    background-color: $yellow !important;
+  }
+
+  &.bg-gray {
+    background-color: $grey2 !important;
+  }
+
+  &.bg-black {
+    background-color: $black !important;
+  }
+
+  &.bg-white {
+    background-color: $white !important;
+  }
+  /*settings*/
+
+  .section-holder {
+    padding: 188px 0 115px;
+
+    @media (max-width: $lg) {
+      padding: 140px 0 110px;
+    }
+
+    @media (max-width: $md) {
+      padding: 100px 0 70px;
+    }
+
+    @media (max-width: $sm) {
+      padding: 80px 0 50px;
+    }
+
+    @media (max-width: $xs) {
+      padding: 60px 0 30px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: $white;
+    font-family: $montserrat;
+    font-weight: 400;
+    margin-bottom: 50px;
+
+    @media (max-width: $sm) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: $xs) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .partners {
+    padding: 0 30px;
+
+    &:not(.slick-slider) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .partner {
+        width: 20%;
+        margin-bottom: 30px;
+
+        @media (max-width: $lg) {
+          width: 20%;
+        }
+
+        @media (max-width: $md) {
+          width: 33.33%;
+        }
+
+        @media (max-width: $sm) {
+          width: 50%;
+        }
+      }
+    }
+
+    .prev-btn, .next-btn {
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      @media (max-width: $md) {
+        height: 30px;
+        width: 30px;
+      }
+
+      @media (max-width: $sm) {
+        height: 25px;
+        width: 25px;
+      }
+
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: silver;
+        transition: fill $delay;
+
+        &:hover {
+          fill: $orange;
+        }
+      }
+    }
+
+    .prev-btn {
+      left: -15px;
+      transform: rotate(180deg);
+
+      @media (max-width: $md) {
+        left: -10px;
+      }
+    }
+
+    .next-btn {
+      right: -15px;
+
+      @media (max-width: $md) {
+        right: -10px;
+      }
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+
+    .partner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+
+      &:last-of-type img {
+        max-height: 90px;
+      }
+
+      img {
+        display: block;
+        width: auto;
+        max-width: 180px;
+        max-height: 40px;
+        height: 100%;
+        object-fit: contain;
+
+        @media (max-width: $sm) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+body:not(.home) .carousel_partners_block {
+  background-color: $this_grey;
+
+  .section-holder {
+    padding: 100px 0;
+
+    @media (max-width: $lg) {
+      padding: 140px 0 110px;
+    }
+
+    @media (max-width: $md) {
+      padding: 100px 0 70px;
+    }
+
+    @media (max-width: $sm) {
+      padding: 80px 0 50px;
+    }
+
+    @media (max-width: $xs) {
+      padding: 60px 0 30px;
+    }
+  }
+}

@@ -1,0 +1,352 @@
+@import '../../src/scss/components/vars';
+
+.contact_section {
+  color: $white;
+  background: linear-gradient(to bottom, $blue2, $this_blue);
+  padding: 117px 0 88px;
+
+  @media (max-width: $lg) {
+    padding: 100px 0 80px;
+  }
+  @media (max-width: $md) {
+    padding: 80px 0;
+  }
+  @media (max-width: $sm) {
+    padding: 60px 0;
+  }
+  @media (max-width: $xs) {
+    padding: 40px 0;
+  }
+
+  .section-holder {
+    max-width: 1011px;
+    margin: 0 auto;
+  }
+
+  .breadcrumbs {
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    text-align: center;
+
+    @media (max-width: $sm) {
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+
+  h1 {
+    font-weight: 300;
+    margin: 0 0 5px 0;
+    font-family: $montserrat;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+
+    @media (max-width: $md) {
+      font-size: 45px;
+      line-height: 55px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 36px;
+      line-height: 46px;
+    }
+  }
+
+  .content {
+    font-size: 20px;
+    line-height: 30px;
+    font-family: $lato;
+    font-weight: 400;
+    text-align: center;
+
+    @media (max-width: $sm) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    @media (max-width: $xs) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  .form-holder {
+    margin-top: 59px;
+
+    @media (max-width: $md) {
+      margin-top: 50px;
+    }
+    @media (max-width: $sm) {
+      margin-top: 45px;
+    }
+    @media (max-width: $xs) {
+      margin-top: 40px;
+    }
+
+    .gform_fields {
+      display: flex !important;
+      flex-wrap: wrap;
+    }
+
+    fieldset {
+      width: 100%;
+    }
+
+    .gfield {
+      width: 100%;
+
+      &.w-50 {
+        width: calc(50% - 13px);
+
+        @media (max-width: $xs) {
+          width: 100%;
+        }
+
+        &:nth-child(odd) {
+          margin-right: auto;
+        }
+      }
+    }
+
+    .gform_wrapper.gravity-theme .ginput_complex:not(.ginput_container_address) fieldset:not([style*="display:none"]):not(.ginput_full), .gform_wrapper.gravity-theme .ginput_complex:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full) {
+      padding-right: 13px;
+    }
+    .gform_wrapper.gravity-theme .ginput_complex:not(.ginput_container_address) fieldset:not([style*="display:none"]):not(.ginput_full)~span:not(.ginput_full), .gform_wrapper.gravity-theme .ginput_complex:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full)~span:not(.ginput_full) {
+      padding-left: 13px;
+      padding-right: 0;
+    }
+
+    .gfield {
+      position: relative;
+
+      .gfield_label {
+        position: absolute;
+        top: 21px;
+        left: 23px;
+        z-index: 1;
+        font-family: $lato;
+        font-weight: 400;
+        font-size: 20px;
+        color: $pantone-cool-gray;
+        margin: 0;
+        transition: all $delay;
+
+        @media (max-width: $sm) {
+          font-size: 18px;
+          left: 15px;
+        }
+        @media (max-width: $xs) {
+          font-size: 16px;
+        }
+
+        .gfield_required {
+          display: none;
+        }
+
+        &.active {
+          top: 3px;
+          font-size: 15px;
+        }
+      }
+    }
+
+    input:not([type="submit"]) {
+      font-family: $lato;
+      font-weight: 400;
+      height: 66px;
+      font-size: 20px !important;
+      color: $pantone-cool-gray;
+      padding: 0 23px !important;
+      border: 0;
+
+      @media (max-width: $sm) {
+        font-size: 18px !important;
+        padding: 0 15px !important;
+      }
+      @media (max-width: $xs) {
+        font-size: 16px !important;
+      }
+    }
+
+    select {
+      font-family: $lato;
+      font-weight: 400;
+      height: 64px;
+      font-size: 20px !important;
+      color: $pantone-cool-gray;
+      border: 0;
+
+      @media (max-width: $sm) {
+        font-size: 18px !important;
+      }
+      @media (max-width: $xs) {
+        font-size: 16px !important;
+      }
+    }
+
+    textarea {
+      font-family: $lato;
+      font-weight: 400;
+      color: $pantone-cool-gray;
+      font-size: 20px !important;
+      border: 0;
+      padding: 17px 23px !important;
+
+      @media (max-width: $sm) {
+        font-size: 18px !important;
+        padding: 17px 15px !important;
+      }
+      @media (max-width: $xs) {
+        font-size: 16px !important;
+      }
+    }
+
+    .gform_wrapper.gravity-theme .gform_fields {
+      grid-gap: 19px;
+    }
+
+    .gform_footer.top_label {
+      margin: 37px 0 0 0;
+      padding: 0;
+      text-align: center;
+
+      @media (max-width: $sm) {
+        margin: 30px 0 0 0;
+      }
+      @media (max-width: $xs) {
+        margin: 20px 0 0 0;
+      }
+    }
+
+    input[type="submit"] {
+      margin: 0 !important;
+      background-color: $orange;
+      border: 1px solid $orange;
+      color: $white;
+      font-size: 20px;
+      line-height: 36px;
+      font-family: $lato;
+      font-weight: 400;
+      padding: 5px 22px;
+      transition: background-color $delay;
+      min-width: 160px;
+
+      @media (max-width: $sm) {
+        font-size: 18px;
+        line-height: 34px;
+        padding: 5px 20px;
+      }
+      @media (max-width: $xs) {
+        font-size: 16px;
+        line-height: 32px;
+        padding: 5px 15px;
+      }
+
+      &:hover {
+        color: $orange;
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}
+
+.contact_info_section {
+  background-color: $orange;
+
+  @media (max-width: $sm) {
+    .container {
+      padding: 0;
+    }
+  }
+
+  .cols {
+    display: flex;
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+    }
+
+    .left-block {
+      color: $white;
+      font-family: $lato;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      padding: 94px 0 105px 149px;
+
+      @media (max-width: $md) {
+        padding: 90px 50px;
+      }
+      @media (max-width: $sm) {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 60px 15px;
+      }
+      @media (max-width: $xs) {
+        font-size: 16px;
+        line-height: 26px;
+        padding: 40px 15px;
+      }
+
+      h3 {
+        margin: 0 0 8px 0;
+        font-family: $lato;
+        font-weight: 700;
+      }
+
+      .address, a {
+        max-width: 294px;
+      }
+
+      a {
+        color: $white;
+
+        &:hover {
+          color: $normal_blue;
+        }
+      }
+    }
+
+    .map {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+
+      @media (max-width: $sm) {
+        position: static;
+        width: 100%;
+        height: 300px;
+      }
+      @media (max-width: $xs) {
+        height: 250px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
