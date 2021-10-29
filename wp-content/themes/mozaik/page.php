@@ -29,6 +29,8 @@
                     get_template_part('modules/current_openings_block/current_openings_block');
                 elseif (get_row_layout() == 'skewed_column_list_block') :
                     get_template_part('modules/skewed_column_list_block/skewed_column_list_block');
+                elseif (get_row_layout() == 'call_to_action_block') :
+                    get_template_part('modules/call_to_action_block/call_to_action_block');
                 endif; ?>
             <?php endwhile; ?>
         <?php endif; ?>

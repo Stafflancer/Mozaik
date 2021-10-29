@@ -20,28 +20,29 @@ if ($posts->have_posts()) {
 
                 <div class="posts">
                     <?php
-                    $i = 1;
                     while ($posts->have_posts()) {
                         $posts->the_post();
-                        if($i < 4 && $current_post_id != get_the_ID()) {?>
-                        <div class="post post-card">
-                            <div class="holder">
-                                <?php if (has_post_thumbnail()) { ?>
-                                    <div class="thumb">
-                                        <?php the_post_thumbnail('post_thumb'); ?>
-                                    </div>
-                                <?php } ?>
-                                <div class="info-block">
-                                    <?php $post_type_obj = get_post_type_object('customer_story'); ?>
-                                    <span><?php echo $post_type_obj->labels->singular_name; ?></span>
-                                    <h4><?php echo get_the_title(); ?></h4>
-                                    <div class="btn-holder">
-                                        <a href="<?php echo get_the_permalink(); ?>" class="secondary-btn">Read Now</a>
+                        if ($current_post_id != get_the_ID()) { ?>
+                            <div class="post post-card">
+                                <div class="holder">
+                                    <?php if (has_post_thumbnail()) { ?>
+                                        <div class="thumb">
+                                            <?php the_post_thumbnail('post_thumb'); ?>
+                                        </div>
+                                    <?php } ?>
+                                    <div class="info-block">
+                                        <?php $post_type_obj = get_post_type_object('customer_story'); ?>
+                                        <span><?php echo $post_type_obj->labels->singular_name; ?></span>
+                                        <h4><?php echo get_the_title(); ?></h4>
+                                        <div class="btn-holder">
+                                            <a href="<?php echo get_the_permalink(); ?>" class="secondary-btn">Read
+                                                Now</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <?php } wp_reset_query(); $i++;
+                        <?php }
+                        wp_reset_query();
                     } ?>
                 </div>
             </div>

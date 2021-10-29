@@ -1,4 +1,8 @@
 (function ($) {
+    $(function(){
+        new WOW().init();
+    });
+
     // Mobile menu open/close
     var burgerBtn = $('.burger-btn');
     var menu = $('header .h-menu');

@@ -1,11 +1,9 @@
 <?php
+$s_label = get_sub_field('s_label');
 $s_heading = get_sub_field('s_heading');
-$s_content = get_sub_field('s_content');
-$s_column_count = get_sub_field('s_column_count');
-$s_column_1 = get_sub_field('s_column_1');
-$s_column_2 = get_sub_field('s_column_2');
-$s_column_3 = get_sub_field('s_column_3');
-$s_column_4 = get_sub_field('s_column_4');
+$s_image = get_sub_field('s_image');
+$s_description = get_sub_field('s_description');
+$s_link = get_sub_field('s_link');
 
 /* Settings */
 $media_type = get_sub_field('media_type');
@@ -21,16 +19,15 @@ $custom_id = get_sub_field('custom_id');
 $custom_css_class = get_sub_field('custom_css_class');
 $heading_color = get_sub_field('heading_color');
 $text_color = get_sub_field('text_color'); ?>
-
-<?php if ($s_heading || $s_content || $s_column_count || have_rows('s_list')) {
-    wp_enqueue_style('list_columns_block_styles', get_template_directory_uri() . '/static/css/modules/list_columns_block/list_columns_block.css', '', '', 'all');
+<?php if ($s_label || $s_heading || $s_image || $s_description || $s_link) {
+    wp_enqueue_style('call_to_action_block_styles', get_template_directory_uri() . '/static/css/modules/call_to_action_block/call_to_action_block.css', '', '', 'all');
 
     if ($media_type == 'image' && !empty($image) && $parallax) {
         wp_enqueue_script('parallax-js', get_template_directory_uri() . '/static/js/parallax.min.js', '', '', true);
     } ?>
 
     <section
-            class="list_columns_block
+            class="call_to_action_block
             <?php
             /* css class */
             echo !empty($custom_css_class) ? $custom_css_class . ' ' : '';
@@ -70,26 +67,30 @@ $text_color = get_sub_field('text_color'); ?>
             <?php } ?>
 
             <div class="section-holder">
-                <?php if ($s_heading) { ?>
-                    <h2><?php echo $s_heading; ?></h2>
-                <?php }
-                if ($s_content) { ?>
-                    <div class="content">
-                        <?php echo $s_content; ?>
+                <div class="story">
+                    <div>
+                        <?php if ($s_label) { ?>
+                            <span><?php echo $s_label; ?></span>
+                        <?php } ?>
+                        <?php if ($s_heading) { ?>
+                            <h2>
+                                <?php echo $s_heading; ?>
+                            </h2>
+                        <?php } ?>
+                        <?php if ($s_description) { ?>
+                            <div class="excerpt">
+                                <?php echo $s_description; ?>
+                            </div>
+                        <?php } ?>
+                        <?php if ($s_link) { ?>
+                            <a href="<?php echo $s_link['url']; ?>" target="<?php echo $s_link['target']; ?>"
+                               class="secondary-btn"><?php echo $s_link['title']; ?></a>
+                        <?php } ?>
                     </div>
-                <?php } ?>
-                <div class="list <?php echo $s_column_count ? 'col-'.$s_column_count : '' ?>">
-                    <?php if($s_column_1) { ?>
-                        <div><?php echo $s_column_1; ?></div>
-                    <?php }
-                    if($s_column_2) { ?>
-                        <div><?php echo $s_column_2; ?></div>
-                    <?php }
-                    if($s_column_3) { ?>
-                        <div><?php echo $s_column_3; ?></div>
-                    <?php }
-                    if($s_column_4) { ?>
-                        <div><?php echo $s_column_4; ?></div>
+                    <?php if ($s_image) { ?>
+                        <div class="image">
+                            <?php echo wp_get_attachment_image($s_image, 'm_xs'); ?>
+                        </div>
                     <?php } ?>
                 </div>
             </div>

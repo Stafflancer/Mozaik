@@ -23,6 +23,12 @@
                             self.addClass('opened');
                             currentA.slideDown(120);
                         }
+
+                        setTimeout(function() {
+                            $('html, body').animate({
+                                scrollTop: self.offset().top - 200
+                            }, 300);
+                        }, 500);
                     });
                 }
             }

@@ -69,26 +69,26 @@ $text_color = get_sub_field('text_color'); ?>
 
             <div class="section-holder">
                 <?php if ($s_heading) { ?>
-                    <h1><?php echo $s_heading; ?></h1>
+                    <h1 class="wow fadeInDown"><?php echo $s_heading; ?></h1>
                 <?php }
                 if ($s_tagline) { ?>
-                    <div class="tagline">
+                    <div class="tagline wow fadeIn">
                         <?php echo $s_tagline; ?>
                     </div>
                 <?php }
                 if ($s_content) { ?>
-                    <div class="content">
+                    <div class="content wow fadeIn">
                         <?php echo $s_content; ?>
                     </div>
                 <?php }
                 if ($s_button) { ?>
-                    <a href="<?php echo $s_button['url']; ?>" class="primary-btn"
+                    <a href="<?php echo $s_button['url']; ?>" class="primary-btn wow fadeInUp"
                        target="<?php echo $s_button['target']; ?>"><?php echo $s_button['title']; ?></a>
                 <?php } ?>
             </div>
 
             <?php if ($s_image) { ?>
-                <div class="s-image">
+                <div class="s-image fadeInUp">
                     <?php echo wp_get_attachment_image($s_image, 'm_md'); ?>
                 </div>
             <?php } ?>

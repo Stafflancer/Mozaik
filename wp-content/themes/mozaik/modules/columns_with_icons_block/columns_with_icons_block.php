@@ -20,11 +20,14 @@ $heading_color = get_sub_field('heading_color');
 $text_color = get_sub_field('text_color'); ?>
 
 <?php if ($s_heading || $s_icons_position || $s_columns_per_row || $s_button || have_rows('s_columns')) {
+    wp_enqueue_style('animate_css', get_template_directory_uri() . '/static/css/animate.min.css', '', '', 'all');
     wp_enqueue_style('columns_with_icons_block_styles', get_template_directory_uri() . '/static/css/modules/columns_with_icons_block/columns_with_icons_block.css', '', '', 'all');
 
     if ($media_type == 'image' && !empty($image) && $parallax) {
         wp_enqueue_script('parallax-js', get_template_directory_uri() . '/static/js/parallax.min.js', '', '', true);
-    } ?>
+    }
+    wp_enqueue_script('wow-js', get_template_directory_uri() . '/static/js/wow.min.js', '', '', true);
+    ?>
 
     <section
             class="columns_with_icons_block
@@ -70,14 +73,14 @@ $text_color = get_sub_field('text_color'); ?>
 
             <div class="section-holder">
                 <?php if ($s_heading) { ?>
-                    <h2><?php echo $s_heading; ?></h2>
+                    <h2 class="wow fadeInUp" data-wow-delay="0.2s"><?php echo $s_heading; ?></h2>
                 <?php }
                 if (have_rows('s_columns')) { ?>
                     <div class="columns <?php echo $s_icons_position ? $s_icons_position : '';
                     echo ' ';
                     echo $s_columns_per_row ? 'columns-' . $s_columns_per_row : ''; ?>">
                         <?php while (have_rows('s_columns')) : the_row(); ?>
-                            <div class="block">
+                            <div class="block wow fadeInUp" data-wow-delay="0.2s">
                                 <?php $icon = get_sub_field('icon'); ?>
                                 <?php if ($icon) { ?>
                                     <div class="icon">
@@ -101,7 +104,7 @@ $text_color = get_sub_field('text_color'); ?>
                 <?php }
 
                 if ($s_button) { ?>
-                    <div class="button-holder">
+                    <div class="button-holder wow fadeInUp" data-wow-delay="0.2s">
                         <a href="<?php echo $s_button['url']; ?>" class="secondary-btn"
                            target="<?php echo $s_button['target']; ?>"><?php echo $s_button['title']; ?></a>
                     </div>

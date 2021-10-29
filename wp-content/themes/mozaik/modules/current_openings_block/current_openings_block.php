@@ -87,9 +87,11 @@ $text_color = get_sub_field('text_color'); ?>
                                         <?php echo $post_obj->post_content;
 
                                         if (!empty($general_email)) { ?>
-                                            <a href="mailto:<?php echo $general_email; ?>" class="secondary-btn">
-                                                <?php _e("Apply", 'mozaik'); ?>
-                                            </a>
+                                            <div>
+                                                <a href="mailto:<?php echo $general_email; ?>" class="secondary-btn">
+                                                    <?php _e("Apply", 'mozaik'); ?>
+                                                </a>
+                                            </div>
                                         <?php } ?>
                                     </div>
                                 <?php } ?>

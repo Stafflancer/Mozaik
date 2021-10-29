@@ -224,6 +224,10 @@
           margin-top: 0;
         }
 
+        *:last-child {
+          margin-bottom: 0;
+        }
+
         h1, h2, h3, h4, h5, h6 {
           color: $this_blue;
           margin: 40px 0 10px 0;
@@ -234,7 +238,7 @@
         }
 
         ul, ol {
-          margin: 0;
+          margin: 0 0 40px 0;
           padding: 0 0 0 37px;
 
           @media (max-width: $sm) {
@@ -266,6 +270,14 @@
                 left: -25px;
               }
             }
+          }
+        }
+
+        a:not(.secondary-btn) {
+          color: $normal_blue;
+
+          &:hover {
+            color: $this_blue;
           }
         }
 

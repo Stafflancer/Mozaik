@@ -75,10 +75,19 @@
   }
 
   &.image-frame {
-    background-image: url("../../../img/decor.png");
-    background-repeat: no-repeat;
-    background-position: 115% 40%;
-    background-size: 50%;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: url("../../../img/decor.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 150% 0;
+      width: 40%;
+      height: 100%;
+    }
   }
 
   /*settings*/
